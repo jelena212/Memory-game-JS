@@ -1,0 +1,57 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.wrapp{
+    width: 100%;
+    min-height: 100vh;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    border: 2px solid #eee;
+    margin: 70px auto;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    float: left;
+    position: relative;
+}
+.back, .front{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    position: absolute;
+}
+.back{
+    text-align: center;
+    line-height: 100px;
+    font-size: 2rem;
+    -webkit-transform: perspective(900px) rotateY(180deg);
+    transform: perspective(900px) rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.7s linear;
+    transition: -webkit-transform 0.7s linear;
+    transition: transform 0.7s linear;
+    transition: transform 0.7s linear, -webkit-transform 0.7s linear;
+}
+.front{
+    background: orange;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.7s linear;
+    transition: -webkit-transform 0.7s linear;
+    transition: transform 0.7s linear;
+    transition: transform 0.7s linear, -webkit-transform 0.7s linear;
+}
+button{
+    width: 100px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
